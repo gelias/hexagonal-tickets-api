@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "4f1b4125-18ea-450b-9753-9f3d948fbb88",
+		"name": "TicketTheater",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27503132"
+	},
+	"item": [
+		{
+			"name": "CalculatePrices",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"adults\": 1,\n    \"kids\": 0,\n    \"students\": 0,\n    \"seniors\": 2,\n    \"weekday\": \"monday\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/ticket/theater",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"ticket",
+						"theater"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  api:
+    container_name: loan-api
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: npm run start:dev
+    env_file:
+      - .env
+    networks:
+      - webnet
+networks:
+  webnet:
