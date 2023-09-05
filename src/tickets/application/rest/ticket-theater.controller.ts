@@ -17,7 +17,6 @@ import { TicketTheaterService } from '../../../tickets/domain/ticket-theater.ser
 @ApiTags('Ticket')
 @Controller('api/v1/ticket/theater')
 export class TeatherController {
-  
   @Inject(TicketTheaterService)
   private readonly service: TicketTheaterService;
 
