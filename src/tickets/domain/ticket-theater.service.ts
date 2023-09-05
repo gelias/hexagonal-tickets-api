@@ -15,6 +15,9 @@ export class TicketTheaterService {
     if (!this.checkCapacity(purchase)) {
       return null;
     }
+
+    purchase.adults, purchase.weekday, 
+
     // Fake response
     return {
       adultsPrice: 0,

@@ -1,0 +1,4 @@
+enum WEEKDAY {
+    WEDNESDAY = 20, 
+    SATURDAY = 40
+}
