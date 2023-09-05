@@ -25,7 +25,7 @@ describe('On Monday', () => {
         kids: 0,
         students: 0,
         seniors: 0,
-        weekday: 'monday',
+        weekday: 'MONDAY',
       })
       .expect(200);
 

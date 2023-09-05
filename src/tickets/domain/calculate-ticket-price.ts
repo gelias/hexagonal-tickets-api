@@ -8,19 +8,17 @@ enum WEEKDAY {
 
 const calculateTicketPrices = (numberOfAdults: number, weekday: string) => {
   switch (weekday) {
-    case 'WEDNESDAY':
-      return numberOfAdults * WEEKDAY.WEDNESDAY;
-    case 'SATURDAY':
-      return numberOfAdults * WEEKDAY.SATURDAY;
+    case 'MONDAY':
+      return numberOfAdults * WEEKDAY.MONDAY;
     default:
       return null;
   }
 };
 
-function calculateTicketForAdults(numberOfAdults: number, weekday: WEEKDAY) {
+export function calculateTicketForAdults(numberOfAdults: number, weekday: string) {
   const adultPrice = 40.0;
 
-  switch (weekday) {
+  switch (weekday as unknown as WEEKDAY) {
     case WEEKDAY.MONDAY:
       return 0;
   }

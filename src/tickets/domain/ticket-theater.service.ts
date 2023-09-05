@@ -2,6 +2,7 @@ import { Inject } from '@nestjs/common';
 import { TicketTheaterPurchaseRequest } from '../application/rest/ticket-theater-purchase-request';
 import { TicketTheaterPurchaseResponse } from '../application/rest/ticket-theater-purchase-response';
 import { CapacityRepository } from '../infrastructure/capacity.repository';
+import { calculateTicketForAdults } from './calculate-ticket-price';
 
 export class TicketTheaterService {
 
@@ -16,11 +17,12 @@ export class TicketTheaterService {
       return null;
     }
 
-    purchase.adults, purchase.weekday, 
+    const adultsTotal = calculateTicketForAdults(purchase.adults, purchase.weekday as string)
+    // purchase.adults, purchase.weekday, 
 
     // Fake response
     return {
-      adultsPrice: 0,
+      adultsPrice: adultsTotal,
       kidsPrice: 0,
       seniorsPrice: 0,
       studentsPrice: 0,
